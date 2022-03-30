@@ -13,7 +13,8 @@ class Home extends CI_Controller
     {
         $data = [
             'judul' => 'katalog buku',
-            "buku" => $this->ModelBuku->getBuku()->result];
+            "buku" => $this->ModelBuku->getBuku()->result()
+        ];
 
         // cek login
         if ($this->session->userdata('email')) {
